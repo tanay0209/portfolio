@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect'
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 
@@ -55,7 +56,7 @@ function HeroSection() {
                                 target='_blank'
                                 href='mailto:tanayjagnani@gmail.com'
                             >
-                                <img
+                                <Image
                                     width={40}
                                     height={40}
                                     src="/assets/contact/gmail.png" alt="Gmail" />
@@ -65,7 +66,7 @@ function HeroSection() {
 
                                 href={'https://github.com/tanay0209'}
                             >
-                                <img
+                                <Image
                                     width={40}
                                     height={40}
                                     src="/assets/contact/github.png" alt="Github" />
@@ -76,7 +77,7 @@ function HeroSection() {
 
                                 href={'https://twitter.com/_tanay01_'}
                             >
-                                <img
+                                <Image
                                     width={40}
                                     height={40}
                                     src="/assets/contact/twitter.png" alt="Twitter" />
@@ -84,10 +85,9 @@ function HeroSection() {
 
                             <Link
                                 target='_blank'
-
                                 href={'https://www.linkedin.com/in/tanay-jagnani-b90322241/'}
                             >
-                                <img
+                                <Image
                                     width={40}
                                     height={40}
                                     src="/assets/contact/linkedin.png" alt="LinkedIn" />

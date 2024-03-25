@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { ProjectDetails } from "@/utils/ProjectUtil";
+import Image from "next/image";
 
 export function Project({ image, title, description, tech, github, live }: ProjectDetails) {
     return (
         <div className='flex flex-col md:flex-row p-4 rounded-md shadow-md justify-between md:h-64'>
             <div className="md:w-1/2 items-center flex justify-center">
-                <img
+                <Image
                     className="h-full"
                     src={image} alt={title} />
             </div>
