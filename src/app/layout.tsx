@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/react"
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${roboto.className}`}>
         <Navbar className="px-8" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
