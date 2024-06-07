@@ -10,7 +10,7 @@ function HeroSection() {
         <SectionLayout>
             <div className='min-h-screen flex items-center justify-center flex-col my-[-50px]'>
                 <p className='font-bold text-3xl text-center md:text-5xl'>
-                    "Frontend and Flutter Developer"
+                    &ldquo;Frontend and Flutter Developer&rdquo;
                 </p>
                 <p className='text-lg text-gray-300 mt-4 text-center'>Transforming designs into digital magic, one line of code at a time.</p>
                 <div className='flex gap-4 mt-6'>
