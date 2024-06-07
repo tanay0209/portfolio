@@ -1,80 +1,92 @@
 export const skills = [
     {
         title: 'Javascript',
-        iconSrc: '/assets/skills/javascript.png'
+        iconSrc: '/assets/skills/javascript.svg'
     },
     {
         title: 'ReactJs',
-        iconSrc: '/assets/skills/react.png'
+        iconSrc: '/assets/skills/react.svg'
     },
     {
         title: 'NextJs',
-        iconSrc: '/assets/skills/nextjs.png'
+        iconSrc: '/assets/skills/nextdotjs.svg'
     },
     {
         title: 'Flutter',
-        iconSrc: '/assets/skills/flutter.png'
+        iconSrc: '/assets/skills/flutter.svg'
     },
     {
         title: 'Dart',
-        iconSrc: '/assets/skills/dart.png'
+        iconSrc: '/assets/skills/dart.svg'
     },
     {
         title: 'Java',
-        iconSrc: '/assets/skills/java.png'
+        iconSrc: '/assets/skills/java.svg'
     },
     {
         title: 'Redux',
-        iconSrc: '/assets/skills/redux.png'
+        iconSrc: '/assets/skills/redux.svg'
     }, {
         title: 'Typescript',
-        iconSrc: '/assets/skills/typescript.png'
+        iconSrc: '/assets/skills/typescript.svg'
     }, {
         title: 'Tailwind CSS',
-        iconSrc: '/assets/skills/tailwind.png'
+        iconSrc: '/assets/skills/tailwindcss.svg'
     },
     {
         title: 'HTML',
-        iconSrc: '/assets/skills/html.png'
+        iconSrc: '/assets/skills/html5.svg'
     },
     {
         title: 'CSS',
-        iconSrc: '/assets/skills/css.png'
+        iconSrc: '/assets/skills/css3.svg'
     },
     {
         title: 'MongoDB',
-        iconSrc: '/assets/skills/mongo.png'
+        iconSrc: '/assets/skills/mongodb.svg'
     },
     {
         title: 'NodeJs',
-        iconSrc: '/assets/skills/node.png'
+        iconSrc: '/assets/skills/nodedotjs.svg'
+    },
+    {
+        title: 'Jira',
+        iconSrc: '/assets/skills/jira.svg'
+    },
+    {
+        title: 'Git',
+        iconSrc: '/assets/skills/git.svg'
     },
     {
         title: 'Express',
-        iconSrc: '/assets/skills/express.png'
+        iconSrc: '/assets/skills/express.svg'
     },
     {
         title: 'Bootstrap',
-        iconSrc: '/assets/skills/bootstrap.png'
-    }, {
+        iconSrc: '/assets/skills/bootstrap.svg'
+    },
+    {
+        title: 'Firebase',
+        iconSrc: '/assets/skills/firebase.svg'
+    },
+    {
         title: 'Figma',
-        iconSrc: '/assets/skills/figma.png'
+        iconSrc: '/assets/skills/figma.svg'
     },
     {
         title: 'Android Studio',
-        iconSrc: '/assets/skills/android-studio.png'
+        iconSrc: '/assets/skills/androidstudio.svg'
     },
-
     {
         title: 'Github',
-        iconSrc: '/assets/skills/github1.png'
+        iconSrc: '/assets/skills/github.svg'
     },
     {
         title: 'VS Code',
-        iconSrc: '/assets/skills/vscode.png'
+        iconSrc: '/assets/skills/visualstudiocode.svg'
     },
     {
         title: 'Postman',
-        iconSrc: '/assets/skills/postman.png'
+        iconSrc: '/assets/skills/postman.svg'
     },
 ]

@@ -1,25 +1,56 @@
-"use client";
-import React, { useState } from "react";
-import { Menu, MenuItem } from '@/components/ui/navbar-menu';
-import { cn } from "@/utils/cn";
-import Link from "next/link";
-import { links } from '@/data/navlinks'
-export function Navbar({ className }: { className?: string }) {
-    const [active, setActive] = useState<string | null>(null);
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+
+function Navbar() {
     return (
         <div
-            className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
-        >
-            <Menu setActive={setActive}>
-                {links.map(link => (
-                    <Link
-                        key={link.name}
-                        href={`/#${link.address}`}
-                    >
-                        <MenuItem setActive={setActive} active={active} item={link.name} />
-                    </Link>
-                ))}
-            </Menu>
+            className='bg-black flex items-center justify-between text-white p-4 text-lg'>
+            <p>Tanay Jagnani</p>
+            <div className='flex items-center gap-2'>
+                <Link
+                    target='_blank'
+                    href='https://www.linkedin.com/in/tanay-jagnani-b90322241/'
+                >
+                    <Image
+                        width={15}
+                        height={15}
+                        style={{
+                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                        }}
+                        src="/assets/contact/linkedin.svg" alt="Linkedin" />
+                </Link>
+
+                <Link
+                    target='_blank'
+                    href='https://twitter.com/_tanay01_'
+                >
+                    <Image
+                        width={15}
+                        height={15}
+                        style={{
+                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                        }}
+                        src="/assets/contact/x.svg" alt="X" />
+                </Link>
+
+                <Link
+                    target='_blank'
+                    href='https://github.com/tanay0209'
+                >
+                    <Image
+                        width={15}
+                        height={15}
+                        style={{
+                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                        }}
+                        src="/assets/skills/github.svg" alt="X" />
+                </Link>
+
+
+            </div>
         </div>
-    );
+    )
 }
+
+export default Navbar

@@ -4,31 +4,57 @@ import Image from "next/image";
 
 export function Project({ image, title, description, tech, github, live }: ProjectDetails) {
     return (
-        <div className='flex flex-col md:flex-row p-4 rounded-md shadow-md justify-between md:h-64'>
-            <div className="md:w-1/2 items-center flex justify-center">
+        <div className='flex-col flex p-4 rounded-md shadow-md justify-between border-2 border-gray-300'>
+            <div className="w-full h-full justify-center flex items-center">
                 <Image
-                    className="h-full"
-                    src={image} alt={title} />
+                    height={400}
+                    width={400}
+                    src={image}
+                    alt={title} />
             </div>
-            <div className="flex flex-col justify-between md:ml-4 gap-4 md:gap-0 md:w-1/2">
-                <h2 className='text-2xl mt-4 md:mt-0'>{title}</h2>
+            <div className="flex flex-col justify-between gap-4 mt-2">
+                <div className="flex items-center justify-between">
+                    <h2 className='text-2xl mt-2 font-bold'>{title}
+                    </h2>
+                    <div className="flex gap-4">
+                        {live && <Link
+                            href={live}
+                            target="_blank"
+                        >
+                            <Image
+                                style={{
+                                    filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                                }}
+                                alt="Github"
+                                height={25}
+                                width={25}
+                                src='/assets/skills/link.svg'
+                            />
+                        </Link>}
+                        {github && <Link
+                            href={github}
+                            target="_blank"
+                        >
+                            <Image
+                                style={{
+                                    filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                                }}
+                                alt="Github"
+                                height={20}
+                                width={20}
+                                src='/assets/skills/github.svg'
+                            />
+                        </Link>}
+                    </div>
+                </div>
+
                 <p className='text-base flex gap-2 flex-wrap'>{tech.map(item => {
-                    return <span className="p-2 rounded-lg text-sm bg-cyan-700 shadow-sm" key={item}>{item}</span>
+                    return <span className="text-sm bg-slate-700 py-1 px-3 rounded-3xl" key={item}>{item}</span>
                 })}</p>
                 <p className='text-sm text-gray-200 text-justify'>{description}</p>
-                <div className='flex justify-between gap-2 w-full'>
 
-                    {live && <Link
-                        href={live}
-                        target="_blank"
-                        className='border-2 border-black hover:bg-black p-2 rounded-md text-sm px-4 w-full text-center'>Live</Link>}
-                    {github && <Link
-                        href={github}
-                        target="_blank"
-                        className='bg-black hover:bg-white hover:text-black transition-all duration-300 p-2 rounded-md text-sm px-4 w-full text-center'>Github</Link>}
-                </div>
             </div>
-        </div>
+        </div >
     );
 }
 

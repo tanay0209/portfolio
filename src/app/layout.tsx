@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react"
+import { Navbar } from "@/components";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
@@ -11,7 +13,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Tanay Jagnani",
-  description: "I am a final year student completing his Bachelors of Engineering degree in Computer Science and Engineering from VTU, Bangalore. ",
+  description: "I am a 2024 Computer Science grauduate with expertise in Javascript, Reactjs, Nextjs and Flutter.",
 };
 
 export default function RootLayout({
@@ -22,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className}`}>
-        <Navbar className="px-8" />
+        <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
