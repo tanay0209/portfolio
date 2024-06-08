@@ -30,7 +30,7 @@ const projects = [
     {
         image: '/assets/projects/blogpost.png',
         title: 'Blog Post',
-        description: 'It is an application where you can share your thoughts and learnings in form blogs and read the blogs of others as well.',
+        description: 'Blog Post is an application where you can share your thoughts and learnings in form of blogs and read the blogs of others as well.',
         tech: ['Flutter', 'Dart', 'Firebase'],
         github: 'https://github.com/tanay0209/Blog-Post',
         live: null

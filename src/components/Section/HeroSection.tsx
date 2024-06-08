@@ -18,8 +18,9 @@ function HeroSection() {
                         locale={false}
                         target='_blank'
                         href='/assets/resume.pdf'
+                        download
                     >
-                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center'>
+                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center text-center items-center'>
                             <Image
                                 height={25}
                                 width={25}
@@ -33,7 +34,7 @@ function HeroSection() {
                         target='_blank'
                         href='mailto:tanayjagnani@gmail.com'
                     >
-                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center'>
+                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center text-center items-center'>
                             <Image
                                 height={25}
                                 width={25}
