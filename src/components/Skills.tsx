@@ -33,7 +33,7 @@ function Skills(props: SkillProp) {
                     filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
                 }}
             />
-            <p className='text-lg font-bold hidden md:block'>{props.title}</p>
+            <p className='text-lg font-bold hidden md:block text-center'>{props.title}</p>
             {showTooltip && (
                 <div className='absolute bottom-16 bg-black text-white text-sm rounded-md p-2 z-10'>
                     {props.title}

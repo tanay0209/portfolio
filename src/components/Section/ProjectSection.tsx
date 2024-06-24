@@ -13,11 +13,11 @@ const projects = [
     },
     {
         image: '/assets/projects/anonymousmsg.png',
-        title: 'AnonymousMsg',
-        description: 'AnonymousMsg allows you to ask questions to others while keeping your identity secret, integrated with gemini AI it also suggests messages that you can ask.',
+        title: 'AskAway',
+        description: 'AskAway provides a way to ask questions to others while keeping your identity secret, integrated with gemini AI it also suggests messages that can be asked.',
         tech: ['Nextjs', 'Typescript', 'Tailwind CSS', 'Gemini AI'],
         github: 'https://github.com/tanay0209/anonymousmsg',
-        live: 'https://anonymousmsg.vercel.app/'
+        live: 'https://ask-away.vercel.app/'
     },
     {
         image: '/assets/projects/cinefolio.png',
