@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div
             className='bg-black flex items-center justify-between text-white p-4 text-lg'>
-            <p>Tanay Jagnani</p>
+            <p>TJ</p>
             <div className='flex items-center gap-2'>
                 <Link
                     target='_blank'
