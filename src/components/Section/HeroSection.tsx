@@ -2,51 +2,27 @@
 import Link from 'next/link'
 import { SectionLayout } from '..'
 import Image from 'next/image'
+import Typewriter from '../ui/typewriter-effect'
+import FlipLinks from '../ui/text-flip'
 
 
 
 function HeroSection() {
     return (
-        <SectionLayout>
-            <div className='min-h-screen flex items-center justify-center flex-col my-[-50px]'>
-                <p className='font-bold text-3xl text-center md:text-5xl'>
-                    &ldquo;Frontend and Flutter Developer&rdquo;
-                </p>
-                <p className='text-lg text-gray-300 mt-4 text-center'>Transforming designs into digital magic, one line of code at a time.</p>
-                <div className='flex gap-4 mt-6'>
-                    <Link
-                        locale={false}
-                        target='_blank'
-                        href='/assets/resume.pdf'
-                        download
-                    >
-                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center text-center items-center'>
-                            <Image
-                                height={25}
-                                width={25}
-                                alt='Resume'
-                                src='/assets/contact/download.svg'
-                            />
-                            Download Resume
-                        </p>
-                    </Link>
-                    <Link
-                        target='_blank'
-                        href='mailto:tanayjagnani@gmail.com'
-                    >
-                        <p className='bg-white flex gap-2 text-black p-2 rounded-md md:w-60 justify-center text-center items-center'>
-                            <Image
-                                height={25}
-                                width={25}
-                                alt='Gmail'
-                                src='/assets/contact/gmail-colored.svg'
-                            />
-                            Connect with me
-                        </p>
-                    </Link>
+        <div className='h-screen relative w-full overflow-hidden'>
+            <div className='absolute h-[150vh] w-[120vw] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gradient-radial from-sky-200 rounded-full'></div>
+            <SectionLayout>
+                <div className='relative min-h-screen flex items-center justify-center flex-col my-[-50px]'>
+                    <div className='flex font-bold text-4xl md:text-7xl'>
+                        <FlipLinks first='Frontend Developer' second='Flutter Developer' />
+                        <p className='cursor-default'></p>
+                    </div>
+                    <div>
+                        <Typewriter className='text-slate-700 font-medium text-center' string={"Transforming designs into digital magic, one line of code at a time."} />
+                    </div>
                 </div>
-            </div>
-        </SectionLayout>
+            </SectionLayout>
+        </div>
     )
 }
 

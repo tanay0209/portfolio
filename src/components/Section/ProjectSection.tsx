@@ -1,4 +1,4 @@
-import { ProjectDetails } from "@/utils/ProjectUtil";
+import { ProjectDetails } from "@/lib/ProjectUtil";
 import { Project } from "@/components/Project";
 import SectionLayout from "@/components/Section/SectionLayout";
 

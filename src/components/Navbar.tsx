@@ -1,56 +1,57 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+'use client'
+import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import {
+    IconBrandGithub,
+    IconBrandX,
+    IconBrandLinkedin,
+    IconMail
+} from "@tabler/icons-react";
 
-function Navbar() {
+export default function Navbar() {
+    const links = [
+        {
+            title: "Tanay Jagnani",
+            icon: (
+                <p className="h-full w-full flex items-center justify-center text-neutral-500 dark:text-neutral-300 font-black">TJ</p>
+            ),
+            href: "/",
+        },
+
+        {
+            title: "LinkedIn",
+            icon: (
+                <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Twitter",
+            icon: (
+                <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "GitHub",
+            icon: (
+                <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Gmail",
+            icon: (
+                <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "mailto:tanayjagnani@gmail.com",
+        },
+    ];
     return (
-        <div
-            className='bg-black flex items-center justify-between text-white p-4 text-lg'>
-            <p>TJ</p>
-            <div className='flex items-center gap-2'>
-                <Link
-                    target='_blank'
-                    href='https://www.linkedin.com/in/tanay-jagnani-b90322241/'
-                >
-                    <Image
-                        width={15}
-                        height={15}
-                        style={{
-                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
-                        }}
-                        src="/assets/contact/linkedin.svg" alt="Linkedin" />
-                </Link>
-
-                <Link
-                    target='_blank'
-                    href='https://twitter.com/_tanay01_'
-                >
-                    <Image
-                        width={15}
-                        height={15}
-                        style={{
-                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
-                        }}
-                        src="/assets/contact/x.svg" alt="X" />
-                </Link>
-
-                <Link
-                    target='_blank'
-                    href='https://github.com/tanay0209'
-                >
-                    <Image
-                        width={15}
-                        height={15}
-                        style={{
-                            filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
-                        }}
-                        src="/assets/skills/github.svg" alt="X" />
-                </Link>
-
-
-            </div>
+        <div className="fixed bottom-10 z-50 right-5 md:right-0 md:w-full md:items-center flex">
+            <FloatingDock
+                items={links}
+            />
         </div>
-    )
+    );
 }
-
-export default Navbar

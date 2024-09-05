@@ -4,7 +4,7 @@ import ProjectSection from "@/components/Section/ProjectSection";
 
 export default function Home() {
   return (
-    <div className="text-white bg-black">
+    <div className="text-white bg-sky-600">
       <HeroSection />
       <About />
       <Experience />

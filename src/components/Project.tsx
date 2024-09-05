@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProjectDetails } from "@/utils/ProjectUtil";
+import { ProjectDetails } from "@/lib/ProjectUtil";
 import Image from "next/image";
 
 export function Project({ image, title, description, tech, github, live }: ProjectDetails) {

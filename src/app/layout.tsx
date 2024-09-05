@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
@@ -6,7 +7,7 @@ import { Navbar } from "@/components";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Roboto({
-  weight: '400',
+  weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
 })
