@@ -6,9 +6,9 @@ export default function ContactForm() {
     return (
         <div className="md:py-12 py-8 w-full">
             <div className="text-white space-y-6">
-                <h3 className="text-2xl font-semibold mb-4 font-serif">Let's Connect</h3>
+                <h3 className="text-2xl font-semibold mb-4 font-serif">Let&apos;s Connect</h3>
                 <p className="text-lg">
-                    I'm always open to new opportunities and interesting projects. Feel free to reach out!
+                    I&apos;m always open to new opportunities and interesting projects. Feel free to reach out!
                 </p>
                 <div className="flex items-center space-x-2">
                     <Mail className="text-white" />
