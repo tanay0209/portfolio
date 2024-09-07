@@ -1,13 +1,12 @@
-
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
-import { Navbar } from "@/components";
+import Navbar from "@/components/ui/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
+const jetBrainsMono = JetBrains_Mono({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -24,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className}`}>
+      <body className={`${jetBrainsMono.className}`}>
         <Navbar />
         {children}
         <Analytics />

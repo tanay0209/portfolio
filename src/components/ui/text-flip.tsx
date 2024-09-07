@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 const DURATION = 0.25
 const STAGGER = 0.07
 
-const FlipLinks = ({ first, second }: { first: string, second: string }) => {
+const FlipLinks = ({ main, alternative, className }: { main: string, alternative: string, className?: string }) => {
     const controls = useAnimation()
 
     useEffect(() => {
@@ -23,10 +24,10 @@ const FlipLinks = ({ first, second }: { first: string, second: string }) => {
             initial="initial"
             animate={controls}
             whileHover="hovered"
-            className='relative block overflow-hidden whitespace-nowrap font-black uppercase text-7-xl text-blue-900'
+            className={cn('relative block overflow-hidden whitespace-nowrap text-4xl md:text-7xl font-black uppercase text-white', className)}
         >
             <div>
-                {first.split("").map((l: string, index: number) => {
+                {main.split("").map((l: string, index: number) => {
                     return <motion.span
                         transition={{
                             duration: DURATION,
@@ -43,7 +44,7 @@ const FlipLinks = ({ first, second }: { first: string, second: string }) => {
             </div>
 
             <div className='absolute inset-0 cursor-pointer'>
-                {second.split("").map((l: string, index: number) => {
+                {alternative.split("").map((l: string, index: number) => {
                     return <motion.span
                         transition={{
                             duration: DURATION,

@@ -1,14 +1,16 @@
 'use client'
 
+import { cn } from "@/lib/utils"
+
 function SectionLayout({ children, classname }: {
     children: React.ReactNode,
     classname?: string
 }) {
     return (
-        <div
-            className={`max-w-lg md:max-w-7xl mx-auto p-8 text-left text-white justify-center items-center ${classname}`}>
+        <section
+            className={cn(`max-w-lg md:max-w-7xl p-8 mx-auto text-left text-white justify-center items-center overflow-hidden`, classname)}>
             {children}
-        </div>
+        </section>
     )
 }
 

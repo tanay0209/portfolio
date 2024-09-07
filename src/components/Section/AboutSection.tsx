@@ -1,5 +1,6 @@
 "use client";
-import { SectionLayout } from '..'
+import SectionLayout from '@/components/Section/SectionLayout';
+import FadeIn from '../ui/fade-in';
 import Typewriter from '../ui/typewriter-effect';
 
 function About() {
@@ -10,26 +11,15 @@ function About() {
         "I wish to travel the world, explore different countries, and interact with new people."
     ];
 
-    const baseCharDelay = 0.017; 
-    const paraDelayBuffer = 0.5;
-
-    let cumulativeDelay = 0;
-
     return (
         <SectionLayout>
             <h2 className='font-bold md:text-5xl text-3xl'>A little about me!</h2>
             <div className='flex flex-col gap-2 md:text-xl text-base text-justify font-sans'>
                 {aboutMe.map((para, index) => {
-                    const paraDelay = para.length * baseCharDelay + paraDelayBuffer;
-                    const delay = cumulativeDelay;
-                    cumulativeDelay += paraDelay;
-
                     return (
-                        <Typewriter
+                        <FadeIn
                             key={index}
-                            string={para}
-                            delay={delay}
-                        />
+                            index={index} string={para} />
                     );
                 })}
             </div>

@@ -48,7 +48,7 @@ export default function Navbar() {
         },
     ];
     return (
-        <div className="fixed bottom-10 z-50 right-5 md:right-0 md:w-full md:items-center flex">
+        <div className="fixed bottom-4 z-50 right-5 md:right-0 md:w-full md:items-center flex">
             <FloatingDock
                 items={links}
             />

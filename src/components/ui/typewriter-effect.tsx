@@ -2,7 +2,13 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { cn } from '@/lib/utils';
 
-
+/*     const baseCharDelay = 0.017;
+    const paraDelayBuffer = 0.5;
+    let cumulativeDelay = 0;
+    const paraDelay = para.length * baseCharDelay + paraDelayBuffer;
+    const delay = cumulativeDelay;
+    cumulativeDelay += paraDelay;
+*/
 const splitUsingRegex = (str: string) => {
     const characters = []
     const regex = /[\s\S]/g;
@@ -35,7 +41,7 @@ function Typewriter({ string, className, delay = 0 }: {
                 {textChars.map((char, index) => {
                     return <motion.span
                         key={index}
-                        className='text-base md:text-xl'
+                        className='text-sm md:text-xl'
                         variants={charVariants}
                         transition={{ duration: 0.35 }}
                     >{char}</motion.span>
