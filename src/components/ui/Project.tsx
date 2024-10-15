@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProjectDetails } from "@/components/Section/ProjectSection";
 import { cn } from "@/lib/utils";
+import { Github, LinkIcon } from "lucide-react";
 
 export function Project({ title, description, tech, github, live, shadow }: ProjectDetails) {
     return (
@@ -12,13 +13,13 @@ export function Project({ title, description, tech, github, live, shadow }: Proj
                         href={live}
                         target="_blank"
                     >
-                        Live
+                        <LinkIcon />
                     </Link>}
                     {github && <Link
                         href={github}
                         target="_blank"
                     >
-                        Github
+                        <Github />
                     </Link>}
                 </div>
             </div>

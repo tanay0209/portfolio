@@ -15,7 +15,7 @@ export default function Navbar() {
             icon: (
                 <p className="h-full w-full flex items-center justify-center text-neutral-500 dark:text-neutral-300 font-black">TJ</p>
             ),
-            href: "/",
+            href: "https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp?usp=sharing",
         },
 
         {
@@ -23,21 +23,21 @@ export default function Navbar() {
             icon: (
                 <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://www.linkedin.com/in/tanay-jagnani-b90322241/",
         },
         {
             title: "Twitter",
             icon: (
                 <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://x.com/_tanay01_"
         },
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://github.com/tanay0209",
         },
         {
             title: "Gmail",

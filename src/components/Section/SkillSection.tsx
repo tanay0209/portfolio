@@ -2,6 +2,8 @@ import React from 'react'
 import { InfiniteMovingCards } from '../ui/infinite-moving-cards';
 
 export const languages = [
+    { name: 'HTML', image: '/assets/skills/html5.svg' },
+    { name: 'CSS', image: '/assets/skills/css3.svg' },
     { name: 'Javascript', image: '/assets/skills/javascript.svg' },
     { name: 'Dart', image: '/assets/skills/dart.svg' },
     { name: 'Java', image: '/assets/skills/java.svg' },
@@ -12,10 +14,12 @@ export const frontendSkills = [
     { name: 'ReactJs', image: '/assets/skills/react.svg' },
     { name: 'NextJs', image: '/assets/skills/nextdotjs.svg' },
     { name: 'Flutter', image: '/assets/skills/flutter.svg' },
-    { name: 'HTML', image: '/assets/skills/html5.svg' },
-    { name: 'CSS', image: '/assets/skills/css3.svg' },
     { name: 'Tailwind CSS', image: '/assets/skills/tailwindcss.svg' },
     { name: 'Bootstrap', image: '/assets/skills/bootstrap.svg' },
+    { name: 'Redux', image: '/assets/skills/redux.svg' },
+    { name: 'GSAP', image: '/assets/skills/gsap.svg' },
+    { name: 'Framer Motion', image: '/assets/skills/framer-motion.svg' },
+
 ];
 
 export const backendSkills = [

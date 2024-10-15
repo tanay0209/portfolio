@@ -41,7 +41,7 @@ const experienceData: Omit<TimelineItemProps, 'isLeft'>[] = [
         description: [
             'Developed the frontend of a Progressive Web Application (PWA).',
             'Converted the design mockups into responsive, user friendly website.',
-            'Handled the states using Redux toolkit'
+            'Handled the states using Redux toolkit.'
         ],
         company: "Hireloom.ai",
         technologies: ['React.js', 'Javascript', 'TailwindCSS'],
@@ -53,10 +53,10 @@ const experienceData: Omit<TimelineItemProps, 'isLeft'>[] = [
         title: 'SDE Intern',
         description: [
             'Developed an efficient user migration helper for onboarding new customers.',
-            'Developed reusable component reducing redundancy.',
+            'Developed reusable component reducing code redundancy.',
             'Performed research on available chatbot development platforms.'
         ],
-        company: "PySphere Research & Development Labs",
+        company: "PySphere Technologies LLP",
         technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'Java'],
         location: "Remote, India",
 

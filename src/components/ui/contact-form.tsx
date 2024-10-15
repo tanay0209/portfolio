@@ -21,7 +21,7 @@ export default function ContactForm() {
                         { name: "github", icon: Github, url: "https://github.com/tanay0209" },
                         { name: "linkedin", icon: Linkedin, url: "https://www.linkedin.com/in/tanay-jagnani-b90322241/" },
                         { name: "twitter", icon: Twitter, url: "https://x.com/_tanay01_" },
-                        { name: "resume", icon: Download, url: "https://drive.google.com/file/d/1rWzAhFnVEJS1IVS0sGpVXeQR9cL2925G/view?usp=drive_link" } //  
+                        { name: "resume", icon: Download, url: "https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp?usp=sharing" } //  
                     ].map(({ name, icon: Icon, url }) => (
                         <a
                             key={name}
