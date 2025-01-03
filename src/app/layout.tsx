@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
 import Navbar from "@/components/ui/Navbar";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const jetBrainsMono = JetBrains_Mono({
   weight: ['400', '500', '600', '700'],
@@ -23,10 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.className}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+      </head>
+      <body className={`${jetBrainsMono.className} bg-slate-800 text-white`}>
         <Navbar />
         {children}
-        <Analytics />
         <SpeedInsights />
       </body>
     </html>

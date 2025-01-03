@@ -1,9 +1,4 @@
-type Skill = {
-    name: string;
-    icon: any;
-    color: string;
-};
-
+import { Skill } from "../lib/types"
 import html from "../../public/assets/skills/html5.svg";
 import css from "../../public/assets/skills/css3.svg";
 import js from "../../public/assets/skills/javascript.svg";
@@ -30,6 +25,10 @@ import redis from "../../public/assets/skills/redis.svg";
 import vscode from "../../public/assets/skills/visualstudiocode.svg";
 import tailwindcss from "../../public/assets/skills/tailwindcss.svg"
 import redux from "../../public/assets/skills/redux.svg"
+import zustand from "../../public/assets/skills/zustand.svg"
+import prisma from "../../public/assets/skills/prisma.svg"
+import postgresql from "../../public/assets/skills/postgresql.svg"
+
 export const skills: Record<string, Skill> = {
     HTML: {
         name: "HTML",
@@ -160,6 +159,21 @@ export const skills: Record<string, Skill> = {
         name: "Redux",
         icon: redux,
         color: "#4A0B76FF"
+    },
+    ZUSTAND: {
+        name: "Zustand",
+        icon: zustand,
+        color: "#000000",
+    },
+    POSTGRESQL: {
+        name: "PostgreSQL",
+        icon: postgresql,
+        color: "#336791",
+    },
+    PRISMA: {
+        name: "Prisma",
+        icon: prisma,
+        color: "#0C0D11FF",
     }
 };
 
