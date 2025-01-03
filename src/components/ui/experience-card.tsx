@@ -1,43 +1,57 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
-import { easeInOut, motion } from "framer-motion"
+"use client"
+import { skills } from "@/lib/constants";
+import Image from "next/image";
+import { motion } from "framer-motion"
 
-function ExperienceCard({ title, description, company, location, technologies, duration }: {
-    title: string,
-    description: string[],
-    company: string,
-    technologies: string[],
-    duration: string,
-    location: string,
+function ExperienceCard({
+    title,
+    description,
+    company,
+    location,
+    technologies,
+    duration,
+}: {
+    title: string;
+    description: string[];
+    company: string;
+    technologies: string[];
+    duration: string;
+    location: string;
 }) {
     return (
-        <motion.div
-            initial={{
-                boxShadow: '8px 8px 0px 1px rgba(17,190,247,1)'
-            }}
-            whileHover={{
-                boxShadow: '0'
-            }}
-            transition={{
-                duration: 0.2,
-                ease: easeInOut
-            }}
-            className={cn('border flex flex-col w-full gap-4 border-white p-4 rounded-sm')}>
-            <div className='flex w-full gap-2 text-sm justify-end'>
-                <p className='text-orange-400 font-medium'>{location}</p>
-                <p>&#9679;</p>
-                <p className='text-yellow-400'>{duration}</p>
+        <div className="flex flex-col space-y-4 justify-between border p-4 rounded-lg shadow-md">
+            <div className="flex justify-between md:flex-row flex-col items-start md:items-center space-y-2">
+                <h2 className="font-bold text-xl">{company}</h2>
+                <div className="text-sm text-gray-500 md:flex md:space-x-2">
+                    <h4 className="flex items-center text-orange-500">{location} <div className="hidden text-white md:flex ml-2">●</div> </h4>
+                    <h4 className="text-yellow-400">{duration}</h4>
+                </div>
             </div>
-            <p className='text-2xl font-black'>{company}</p>
-            <p className='text-xl font-semibold'>{title}</p>
-            <div>
-                {description.map((desc, index) => (
-                    <p key={index} className='pl-2 text-justify'> - {desc}</p>
+            <h3 className="font-semibold text-lg">{title}</h3>
+            <ul className="list-disc ml-5">
+                {description.map((desc, idx) => (
+                    <li key={idx} className="text-sm text-gray-300">
+                        {desc}
+                    </li>
                 ))}
+            </ul>
+            <div className="flex flex-wrap gap-2 my-2">
+                {technologies.map((tech, idx) => {
+                    const skill = skills[tech.toUpperCase()];
+                    return (
+                        <span
+                            key={idx}
+                            className={`flex items-center hover:cursor-default gap-1 border px-2 py-1 rounded text-sm`}
+                            style={{ borderColor: skill.color, color: skill.color }}
+                        >
+                            <Image alt={skill.name} src={skill.icon} width={16} height={16} />
+                            {skill.name}
+                        </span>
+                    )
+                })}
             </div>
-            <div className='text-emerald-500 font-medium'>{technologies.join(', ')}</div>
-        </motion.div>
-    )
+        </div>
+    );
 }
 
-export default ExperienceCard
+export default ExperienceCard;

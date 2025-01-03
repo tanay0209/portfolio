@@ -8,7 +8,7 @@ function SectionLayout({ children, classname }: {
 }) {
     return (
         <section
-            className={cn(`max-w-lg md:max-w-7xl p-8 mx-auto text-left text-white justify-center items-center overflow-hidden`, classname)}>
+            className={cn(`max-w-lg md:max-w-5xl p-8 mx-auto text-left justify-center items-center overflow-hidden`, classname)}>
             {children}
         </section>
     )
