@@ -28,7 +28,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </head>
       <body className={`${jetBrainsMono.className} bg-slate-800 text-white`}>
-        <Navbar />
         {children}
         <SpeedInsights />
       </body>

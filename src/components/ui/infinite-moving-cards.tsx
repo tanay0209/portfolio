@@ -2,11 +2,11 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion"
+
 export const InfiniteMovingCards = ({
     items,
     direction = "left",
-    speed = "fast",
+    speed = "normal",
     pauseOnHover = true,
     className,
 }: {
@@ -58,7 +58,7 @@ export const InfiniteMovingCards = ({
         if (containerRef.current) {
             containerRef.current.style.setProperty(
                 "--animation-duration",
-                speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s"
+                speed === "fast" ? "30s" : speed === "normal" ? "40s" : "80s"
             );
         }
     };
@@ -67,42 +67,33 @@ export const InfiniteMovingCards = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "relative overflow-hidden max-w-7xl",
                 className
             )}
         >
             <ul
                 ref={scrollerRef}
                 className={cn(
-                    "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+                    "flex gap-6 py-4 animate-scroll w-max",
                     start && "animate-scroll",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
                 {items.map((item) => (
                     <li
-                        className="md:w-[200px] w-[125px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-1 py-2 md:px-8 md:py-6"
-                        style={{
-                                background:
-                                    "linear-gradient(180deg, var(--slate-800), var(--slate-900))",
-                        }}
                         key={item.name}
+                        className="w-fit rounded-sm border shadow-md hover:shadow-xl transition-all duration-300 px-4 py-2 flex items-center justify-center gap-4"
                     >
-                        <blockquote>
-                            <div className="relative z-20 justify-center flex flex-col md:flex-row  items-center gap-4">
-                                {item.image && (
-                                    <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className="md:size-12 size-10  object-contain"
-                                    />
-                                )}
-                                <span
-                                    className="md:text-base text-sm text-center leading-[1.6] text-gray-400 font-normal hidden md:block">
-                                    {item.name}
-                                </span>
-                            </div>
-                        </blockquote>
+                        {item.image && (
+                            <img
+                                src={item.image}
+                                alt={item.name}
+                                className="size-8"
+                            />
+                        )}
+                        <p className="text-sm md:text-base text-gray-300 text-center font-medium">
+                            {item.name}
+                        </p>
                     </li>
                 ))}
             </ul>

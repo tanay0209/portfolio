@@ -1,57 +1,75 @@
-'use client'
-import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-    IconBrandGithub,
-    IconBrandX,
-    IconBrandLinkedin,
-    IconMail
-} from "@tabler/icons-react";
+"use client";
+
+import Image from "next/image";
+import logo from "../../../public/assets/logo-tanay.png";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
-    const links = [
-        {
-            title: "Tanay Jagnani",
-            icon: (
-                <p className="h-full w-full flex items-center justify-center text-neutral-500 dark:text-neutral-300 font-black">TJ</p>
-            ),
-            href: "https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp?usp=sharing",
-        },
+    const [isOpen, setIsOpen] = useState(false);
 
-        {
-            title: "LinkedIn",
-            icon: (
-                <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://www.linkedin.com/in/tanay-jagnani-b90322241/",
-        },
-        {
-            title: "Twitter",
-            icon: (
-                <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://x.com/_tanay01_"
-        },
-        {
-            title: "GitHub",
-            icon: (
-                <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "https://github.com/tanay0209",
-        },
-        {
-            title: "Gmail",
-            icon: (
-                <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "mailto:tanayjagnani@gmail.com",
-        },
+    const handleLinkClick = () => setIsOpen(false);
+
+    const links = [
+        { href: "/", label: "Home" },
+        { href: "#projects", label: "Projects" },
+        { href: "#skills", label: "Skills" },
     ];
+
+    const renderLinks = (isMobile = false) =>
+        links.map(({ href, label }) => (
+            <li key={href} className={`${isMobile ? "text-lg" : ""}`}>
+                <Link
+                    href={href}
+                    onClick={isMobile ? handleLinkClick : undefined}
+                    className={`hover:text-gray-300 ${isMobile ? "text-white" : ""}`}
+                >
+                    {label}
+                </Link>
+            </li>
+        ));
+
     return (
-        <div className="fixed bottom-4 z-50 right-5 md:right-0 md:w-full md:items-center flex">
-            <FloatingDock
-                items={links}
-            />
-        </div>
+        <nav className="w-full top-0 left-0 z-50">
+            <div className="flex items-center justify-between px-4 py-3">
+                <div className="text-2xl font-bold">
+                    <Link href="/" aria-label="Navigate to Home">
+                        <Image
+                            className="w-12 h-12"
+                            src={logo}
+                            alt="Tanay Jagnani Logo"
+                            priority
+                        />
+                    </Link>
+                </div>
+
+                <ul className="hidden md:flex gap-8">{renderLinks()}</ul>
+
+                <button
+                    className="md:hidden focus:outline-none"
+                    aria-label="Toggle Navigation Menu"
+                    onClick={() => setIsOpen((prev) => !prev)}
+                >
+                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </div>
+
+            <div
+                className={`fixed top-0 left-0 w-64 h-full bg-slate-900 transform transition-transform duration-300 ease-in-out text-white md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
+            >
+                <div className="p-4">
+                    <button
+                        className="mb-8 text-white hover:text-gray-300"
+                        onClick={() => setIsOpen(false)}
+                        aria-label="Close Menu"
+                    >
+                        <X size={24} />
+                    </button>
+                    <ul className="flex flex-col gap-6">{renderLinks(true)}</ul>
+                </div>
+            </div>
+        </nav>
     );
 }
