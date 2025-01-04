@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-
+import Image from "next/image";
 export const InfiniteMovingCards = ({
     items,
     direction = "left",
@@ -85,7 +85,7 @@ export const InfiniteMovingCards = ({
                         className="w-fit rounded-sm border shadow-md hover:shadow-xl transition-all duration-300 px-4 py-2 flex items-center justify-center gap-4"
                     >
                         {item.image && (
-                            <img
+                            <Image
                                 src={item.image}
                                 alt={item.name}
                                 className="size-8"

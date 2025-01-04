@@ -1,42 +1,113 @@
-import React from "react";
-import { Mail, Github, Linkedin, Twitter, Download } from "lucide-react";
+"use client";
 
+import { useState } from "react";
+import { sendEmail } from "@/app/actions/sendEmail";
 
 export default function ContactForm() {
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+    const [loading, setLoading] = useState(false);
+    const [feedback, setFeedback] = useState<{ success: boolean; message: string } | null>(null);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setFeedback(null);
+        if (!formData.phone && !formData.email) {
+            setFeedback({ success: false, message: "Please provide either a phone number or an email address." });
+            setLoading(false);
+            return;
+        }
+        try {
+            const result = await sendEmail(formData);
+            if (result.success) {
+                setFeedback({ success: true, message: "Message sent successfully!" });
+                setFormData({ name: "", phone: "", email: "", message: "" });
+            } else {
+                setFeedback({ success: false, message: "Failed to send the message." });
+            }
+        } catch (error) {
+            setFeedback({ success: false, message: "An unexpected error occurred. Please try again." });
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
-        <div className="md:py-12 py-8 w-full">
-            <div className="text-white space-y-6">
-                <h3 className="text-2xl font-semibold mb-4 font-serif">Let&apos;s Connect</h3>
-                <p className="text-lg">
-                    I&apos;m always open to new opportunities and interesting projects. Feel free to reach out!
-                </p>
-                <div className="flex items-center space-x-2">
-                    <Mail className="text-white" />
-                    <a href="mailto:tanayjagnani@gmail.com" className="text-white hover:underline transition-all duration-300 ease-in-out hover:text-sky-200">
-                        tanayjagnani@gmail.com
-                    </a>
+        <form onSubmit={handleSubmit} className="space-y-2 w-full md:w-1/2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Full Name"
+                        className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none rounded-sm"
+                        required
+                    />
                 </div>
-                <div className="flex space-x-4">
-                    {[
-                        { name: "github", icon: Github, url: "https://github.com/tanay0209" },
-                        { name: "linkedin", icon: Linkedin, url: "https://www.linkedin.com/in/tanay-jagnani-b90322241/" },
-                        { name: "twitter", icon: Twitter, url: "https://x.com/_tanay01_" },
-                        { name: "resume", icon: Download, url: "https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp?usp=sharing" } //  
-                    ].map(({ name, icon: Icon, url }) => (
-                        <a
-                            key={name}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`text-white hover:text-blue-200 transition-all duration-300 ease-in-out flex gap-2 cursor-pointer transform hover:scale-110 origin-left`}
-                            aria-label={`Visit my ${name} profile`}
-                        >
-                            <Icon size={24} />
-                            <p className="hidden md:block">{name}</p>
-                        </a>
-                    ))}
+                <div>
+                    <input
+                        type="tel"
+                        name="phone"
+                        inputMode="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Phone Number"
+                        className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none rounded-sm"
+
+                    />
                 </div>
             </div>
-        </div>
+            <div>
+                <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                    className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none rounded-sm"
+
+                />
+            </div>
+            <div>
+                <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Write your message here..."
+                    rows={3}
+                    className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none rounded-sm"
+                    required
+                ></textarea>
+            </div>
+            <div className="flex justify-center">
+                <button
+                    type="submit"
+                    className={`px-6 py-3 w-full rounded-sm text-white text-lg font-medium bg-black hover:bg-black/45 transition ${loading ? "opacity-70 cursor-not-allowed" : ""
+                        }`}
+                    disabled={loading}
+                >
+                    {loading ? "Sending..." : "Send Message"}
+                </button>
+            </div>
+            {feedback && (
+                <p
+                    className={`text-center mt-4 ${feedback.success ? "text-green-600" : "text-red-600"
+                        }`}
+                >
+                    {feedback.message}
+                </p>
+            )}
+        </form>
     );
 }

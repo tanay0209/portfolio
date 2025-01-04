@@ -163,27 +163,6 @@ export const languages = [
 //             href: "https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp?usp=sharing",
 //         },
 //         {
-//             title: "LinkedIn",
-//             icon: (
-//                 <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//             ),
-//             href: "https://www.linkedin.com/in/tanay-jagnani-b90322241/",
-//         },
-//         {
-//             title: "Twitter",
-//             icon: (
-//                 <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//             ),
-//             href: "https://x.com/_tanay01_"
-//         },
-//         {
-//             title: "GitHub",
-//             icon: (
-//                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//             ),
-//             href: "https://github.com/tanay0209",
-//         },
-//         {
 //             title: "Gmail",
 //             icon: (
 //                 <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />

@@ -27,7 +27,7 @@ export function WorkCard({ image, title, description, tech, github, live }: Proj
                                 <Image alt={skill.name} src={skill.icon} width={16} height={16} />
                                 {skill.name}
                             </span> :
-                            <span key={idx} className="border px-2 py-1 rounded text-sm">
+                            <span key={idx} className="border hover:cursor-default px-2 py-1 rounded text-sm">
                                 {tech}
                             </span>
                     )
