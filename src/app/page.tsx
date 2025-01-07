@@ -8,7 +8,7 @@ import Navbar from "@/components/ui/Navbar";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { IconBrandDiscord, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { File, Mail } from "lucide-react";
 import ContactForm from "@/components/ui/contact-form";
 
 export default function Home() {
@@ -20,7 +20,13 @@ export default function Home() {
       <div className="flex flex-col md:flex md:flex-row items-start gap-4">
         <div className="space-y-2 gap-4">
           <h1 className="text-4xl pt-4 font-black">Konnichiwa! I&apos;m Tanay Jagnani</h1>
-          <p className="text-justify">I&apos;m a full stack developer from India. Converting ideas into products one line of code at a time, passionate about learning new things and building cool products. </p>
+          <ul className="list-disc ml-4">
+            <li>Based out of India</li>
+            <li>Full Stack Developer</li>
+            <li>Building <Link className="underline" target="_blank" href="https://resourcifyy.xyz">Resourcifyy</Link></li>
+            <li>Converting ideas into products</li>
+            <li>Open to work, collaborate & freelance</li>
+          </ul>
         </div>
       </div>
       {/* EXPERIENCE SECTION */}
@@ -86,8 +92,13 @@ export default function Home() {
       <div className="flex flex-col md:flex-row h-full gap-4">
         <div className="space-y-8 justify-between h-full gap-4 w-full md:w-1/2">
           <p className="text-justify">I&apos;m open to new opportunities, collaborations and projects. Feel free to reach out to me on any of the platforms below.</p>
-          <div className="flex items-center gap-2">
-            <Mail /> tanayjagnani@gmail.com
+          <div className="flex gap-2 flex-col">
+            <div className="flex items-center gap-2">
+              <Mail /> tanayjagnani@gmail.com
+            </div>
+            <div className="flex items-center gap-2">
+              <File /> <Link href="https://drive.google.com/drive/folders/1JAJkTCOukxwgJgKUsZ2XZSKJmwNnqFXp" target="_blanks" >Resume</Link>
+            </div>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link target="_blank" href="https://github.com/tanay0209" className="p-2  hover:border-gray-500 border rounded-full hover:bg-gray-500 hover:text-white cursor-pointer">

@@ -86,6 +86,8 @@ export const InfiniteMovingCards = ({
                     >
                         {item.image && (
                             <Image
+                                width={100}
+                                height={100}
                                 src={item.image}
                                 alt={item.name}
                                 className="size-8"

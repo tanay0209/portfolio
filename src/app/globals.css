@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth !important;
 }
 
+html::-webkit-scrollbar{
+  display: none;
+}
+
 @layer base {
   :root {
         --background: 0 0% 100%;
