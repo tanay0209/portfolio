@@ -35,7 +35,12 @@ export const projects = [
     {
         image: resourcifyy,
         title: 'Resourcifyy',
-        description: 'A community driven platform to find the best resources for learning andt tools available over internet. Users can upvote or downvote them, and add new resources to the platform. The platform is designed to help users find the best resources for learning new skills and technologies.',
+        description: [
+            "A community-driven platform to find the best resources for learning and tools available over the internet.",
+            "Users can upvote or downvote them, and add new resources to the platform.",
+            "The platform is designed to help users find the best resources for learning new skills and technologies.",
+            "With 1000+ unique visitors, 3000+ page views, and 200+ resources, the platform continues to grow and provide value to its users."
+        ],
         tech: ['Nextjs', 'Typescript', 'TailwindCSS', 'PostgreSQL', "Prisma", "Zustand", "Shadcn"],
         live: 'https://www.resourcifyy.xyz/',
         github: null
@@ -43,7 +48,12 @@ export const projects = [
     {
         image: askaway,
         title: 'AskAway',
-        description: 'A platform that enables users to ask questions anonymously, fostering open communication and genuine responses without revealing identity. Perfect for seeking advice, opinions, or feedback in a safe and private environment.',
+        description: [
+            "A platform that allows users to ask questions anonymously, ensuring privacy.",
+            "Encourages open communication and honest responses without revealing identity.",
+            "Ideal for seeking advice, opinions, or feedback in a secure environment.",
+            "Provides a safe space for users to express themselves freely."
+        ],
         tech: ['Nextjs', 'Typescript', 'TailwindCSS', 'MongoDB', "Shadcn"],
         github: "https://github.com/tanay0209/AskAway",
         live: 'https://ask-away.vercel.app/',
@@ -51,7 +61,11 @@ export const projects = [
     {
         image: ideaflow,
         title: 'IdeaFlow',
-        description: 'A collaborative tool for idea generation and brainstorming. With real-time updates and collaboration features, users may set up organizations, collaborate on a shared canvas board, and develop ideas intuitively. Ideal for groups wishing to foster invention and creativity among themselves.',
+        description: [
+            "A collaborative tool for idea generation and brainstorming.",
+            "With real-time updates and collaboration features, users may set up organizations, collaborate on a shared canvas board, and develop ideas intuitively.",
+            "Ideal for groups wishing to foster invention and creativity among themselves."
+        ],
         tech: ['Nextjs', 'TailwindCSS', 'Typescript', "Convex", "Clerk", "Shadcn"],
         github: 'https://github.com/tanay0209/IdeaFlow',
         live: "https://idea-flow-dev.vercel.app/",
@@ -60,7 +74,11 @@ export const projects = [
     {
         image: codeblock,
         title: 'Code Block',
-        description: 'Code Block is an online compiler for HTML, CSS, and Vanilla JavaScript. It makes the procedure easier by eliminating the requirement to make new folders and files for every project. Users are able to browse and share other users code as well as store and share their own.',
+        description: [
+            "Code Block is an online compiler for HTML, CSS, and Vanilla JavaScript.",
+            "It simplifies the process by eliminating the need to create new folders and files for each project.",
+            "Users can browse and share other users' code as well as store and share their own."
+        ],
         tech: ['Reactjs', 'Typescript', 'Nodejs', "Expressjs", "TailwindCSS", "Redux", "MongoDB", "Shadcn"],
         github: 'https://github.com/tanay0209/code-block',
         live: "https://code-block-dev.vercel.app/",
@@ -76,7 +94,11 @@ export const designs = [
     {
         image: findbuddies,
         title: 'Find Buddies ( Hero Section )',
-        description: 'Find Buddies is a platform that allows users to find and connect with like-minded individuals. Users can create a profile, search for other users based on their interests, and connect with them. The platform is designed to help users find friends with similar interests and hobbies.',
+        description: [
+            'Find Buddies is a platform that allows users to find and connect with like-minded individuals.',
+            'Users can create a profile, search for other users based on their interests, and connect with them.',
+            'The platform is designed to help users find friends with similar interests and hobbies.'
+        ],
         tech: ["Reactjs", "TailwindCSS", "Javascript"],
         live: 'https://find-buddies.netlify.app/',
         github: "https://github.com/tanay0209/find-buddies"
@@ -84,7 +106,11 @@ export const designs = [
     {
         image: clientup,
         title: 'ClientUp',
-        description: 'ClientUp is a platform that allows users to find and connect with clients for their business. Users can create a profile, search for clients based on their requirements, and connect with them. The platform is designed to help users find clients for their business and grow their network.',
+        description: [
+            'ClientUp is a platform that allows users to find and connect with clients for their business.',
+            'Users can create a profile, search for clients based on their requirements, and connect with them.',
+            'The platform is designed to help users find clients for their business and grow their network.'
+        ],
         tech: ["Reactjs", "TailwindCSS", "Javascript", "FramerMotion"],
         live: 'https://client-up.netlify.app/',
         github: "https://github.com/tanay0209/client-up"
@@ -92,7 +118,9 @@ export const designs = [
     {
         image: rmax,
         title: 'RMax',
-        description: 'RMax is a website designed to improve business impact by providing tools and resources for better decision-making and strategy development.',
+        description: [
+            'RMax is a website designed to improve business impact by providing tools and resources for better decision-making and strategy development.'
+        ],
         tech: ["Reactjs", "TailwindCSS", "Javascript", "FramerMotion"],
         live: 'https://r-max.netlify.app/',
         github: "https://github.com/tanay0209/r-max"
@@ -100,7 +128,11 @@ export const designs = [
     {
         image: payup,
         title: 'Payup ( Hero Section )',
-        description: 'PayUp is a digital payment solution platform that allows users to split bills and expenses with friends and family. Users can create a group, add expenses, and split the bill with friends. The platform is designed to help users manage their expenses and split bills easily.',
+        description: [
+            'PayUp is a digital payment solution platform that allows users to split bills and expenses with friends and family.',
+            'Users can create a group, add expenses, and split the bill with friends.',
+            'The platform is designed to help users manage their expenses and split bills easily.'
+        ],
         tech: ["Reactjs", "TailwindCSS", "Javascript"],
         live: 'https://pay-up.netlify.app/',
         github: "https://github.com/tanay0209/pay-up"
@@ -108,12 +140,17 @@ export const designs = [
     {
         image: japantravels,
         title: 'Japan Travels ( Hero Section )',
-        description: 'Japan Travels is a travel website that provides information about popular tourist destinations in Japan. Users can explore different cities, attractions, and activities in Japan. The platform is designed to help users plan their trip to Japan and discover new places to visit.',
+        description: [
+            'Japan Travels is a travel website that provides information about popular tourist destinations in Japan.',
+            'Users can explore different cities, attractions, and activities in Japan.',
+            'The platform is designed to help users plan their trip to Japan and discover new places to visit.'
+        ],
         tech: ["Reactjs", "TailwindCSS", "Javascript"],
         live: 'https://japan-travels.netlify.app/',
         github: "https://github.com/tanay0209/japan-travels"
     }
 ]
+
 
 export const languages = [
     { name: 'HTML', image: '/assets/skills/html5.svg' },

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ProjectDetails } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Github, LinkIcon } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { skills } from "@/lib/constants";
 import Image from "next/image";
+import { v4 as uuidv4 } from "uuid"
 
 export function WorkCard({ image, title, description, tech, github, live }: ProjectDetails) {
     return (
@@ -11,8 +12,10 @@ export function WorkCard({ image, title, description, tech, github, live }: Proj
             <Image src={image} alt={title} className="w-full" />
 
             <h2 className='text-2xl mt-2 font-bold'>{title}</h2>
-            <div className="flex text-sm items-center gap-2">
-                <p className="text-sm text-gray-200 text-justify">{description}</p>
+            <div className="flex text-sm items-center gap-2 px-2">
+                <ul className="list-disc">
+                    {description.map((point) => <li key={uuidv4()} className="text-sm text-gray-200 text-justify">{point}</li>)}
+                </ul>
             </div>
             <div className="flex text-sm items-center gap-2 flex-wrap">
                 {tech.map((tech, idx) => {

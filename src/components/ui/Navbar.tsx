@@ -5,6 +5,7 @@ import logo from "../../../public/assets/logo-tanay.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -56,18 +57,11 @@ export default function Navbar() {
             </div>
 
             <div
-                className={`fixed top-0 left-0 w-64 h-full bg-slate-900 transform transition-transform duration-300 ease-in-out text-white md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
+                className={cn(`fixed top-0 left-0 w-64 h-screen bg-slate-900 transform transition-transform duration-300 ease-in-out text-white md:hidden`,
+                    isOpen ? "translate-x-0" : "-translate-x-full")}
             >
                 <div className="p-4">
-                    <button
-                        className="mb-8 text-white hover:text-gray-300"
-                        onClick={() => setIsOpen(false)}
-                        aria-label="Close Menu"
-                    >
-                        <X size={24} />
-                    </button>
-                    <ul className="flex flex-col gap-6">{renderLinks(true)}</ul>
+                    <ul className="flex flex-col mt-8 gap-6">{renderLinks(true)}</ul>
                 </div>
             </div>
         </nav>

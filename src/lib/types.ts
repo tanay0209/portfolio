@@ -9,7 +9,7 @@ export type TechType = {
 export type ProjectDetails = {
     image: StaticImageData,
     title: string,
-    description: string,
+    description: string[],
     tech: string[],
     github: string | null,
     live: string | null,
