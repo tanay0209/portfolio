@@ -28,6 +28,8 @@ import redux from "../../public/assets/skills/redux.svg"
 import zustand from "../../public/assets/skills/zustand.svg"
 import prisma from "../../public/assets/skills/prisma.svg"
 import postgresql from "../../public/assets/skills/postgresql.svg"
+import angular from "../../public/assets/skills/angular.svg"
+import spring from "../../public/assets/skills/spring.svg"
 
 export const skills: Record<string, Skill> = {
     HTML: {
@@ -133,7 +135,7 @@ export const skills: Record<string, Skill> = {
     NEXTJS: {
         name: "NextJS",
         icon: nextjs,
-        color: "#000000",
+        color: "#fff",
     },
     POSTMAN: {
         name: "Postman",
@@ -163,7 +165,7 @@ export const skills: Record<string, Skill> = {
     ZUSTAND: {
         name: "Zustand",
         icon: zustand,
-        color: "#000000",
+        color: "#815A50",
     },
     POSTGRESQL: {
         name: "PostgreSQL",
@@ -173,7 +175,17 @@ export const skills: Record<string, Skill> = {
     PRISMA: {
         name: "Prisma",
         icon: prisma,
-        color: "#0C0D11FF",
+        color: "#7F9CF5",
+    },
+    ANGULAR: {
+        name: "Angular",
+        icon: angular,
+        color: "#DD0031"
+    },
+    SPRING: {
+        name: "Springboot",
+        icon: spring,
+        color: "#70AD51"
     }
 };
 

@@ -19,7 +19,7 @@ function ExperienceCard({
     location: string;
 }) {
     return (
-        <div className="flex flex-col space-y-4 justify-between border p-4 rounded-lg shadow-md">
+        <div className="flex flex-col space-y-4 justify-between p-6 rounded-lg shadow-slate-800 shadow-md">
             <div className="flex justify-between md:flex-row flex-col items-start md:items-center space-y-2">
                 <h2 className="font-bold text-xl">{company}</h2>
                 <div className="text-sm text-gray-500 md:flex md:space-x-2">
@@ -27,15 +27,15 @@ function ExperienceCard({
                     <h4 className="text-yellow-400">{duration}</h4>
                 </div>
             </div>
-            <h3 className="font-semibold text-lg">{title}</h3>
+            <h3 className="font-semibold text-lg font-bubblegum">{title}</h3>
             <ul className="list-disc ml-5">
                 {description.map((desc, idx) => (
-                    <li key={idx} className="text-sm text-gray-300">
+                    <li key={idx} className="text-sm text-gray-300 mt-2">
                         {desc}
                     </li>
                 ))}
             </ul>
-            <div className="flex flex-wrap gap-2 my-2">
+            <div className="flex flex-wrap gap-2 my-2 font-bubblegum">
                 {technologies.map((tech, idx) => {
                     const skill = skills[tech.toUpperCase()];
                     return (
