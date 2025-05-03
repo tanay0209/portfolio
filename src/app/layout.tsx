@@ -32,6 +32,7 @@ export default function RootLayout({
       </head>
       <body className={`${jetBrainsMono.className} bg-slate-900 text-white w-full`}>
         {children}
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon={`{"token": ${process.env.CLOUDFLARE_TOKEN}}`}></script>
       </body>
     </html>
   );

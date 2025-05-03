@@ -19,9 +19,17 @@ export default function Navbar() {
                 </div>
 
                 <ul className="flex gap-8 *:cursor-pointer">
-                    <li>Home</li>
-                    <li>Projects</li>
-                    <li>Skills</li>
+                    <li>
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link href="#projects">Projects</Link>
+                    </li>
+                    <li>
+                        <Link href="#skills">
+                            Skills
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>
