@@ -2,13 +2,14 @@ export const experience = [
     {
         title: "Assistant System Engineer",
         description: [
+            "Independently developed the entire frontend using HTML, CSS, and JavaScript, focusing on responsiveness and user experience",
             "Collaborating in a team project to design and build an Airline Management System simulating real-time flight booking and administrative operations",
-            "Developed microservices for flight scheduling, booking management, and user authentication using Springboot"
+            "Developed microservices for flight scheduling, booking management, and flight management using Springboot",
         ],
         company: "Tata Consultancy Services",
         location: "Delhi, India",
         duration: "Mar 2025 - Present",
-        technologies: ["Java", "Spring", "Angular", "TailwindCSS", "Javascript"]
+        technologies: ["Java", "Spring", "Angular", "TailwindCSS", "Typescript", "Javascript"]
     },
     {
         title: "Frontend Developer Intern",
@@ -19,7 +20,7 @@ export const experience = [
         ],
         company: "Hireloom.ai",
         location: "Remote, India",
-        duration: "Aug 2024 - Aug 2024",
+        duration: "Aug 2024 - Sept 2024",
         technologies: ["ReactJS", "TailwindCSS", "Javascript",]
     },
     {
@@ -27,12 +28,12 @@ export const experience = [
         description: [
             "Developed a scalable user migration service, improving data transfer efficiency by 25% through seamless API integrations",
             "Designed and built reusable, modular components, reducing development time for new features by 15%.",
-            "Researched and selected optimal chatbot development tool, creating a fully functional prototype that was successfully demonstrated to the product team."
+            "Researched and selected optimal chatbot development tool, creating a fully functional prototype that was successfully demonstrated to the product team.",
         ],
         company: "PySphere Technologies LLP",
         location: "Remote, India",
-        duration: "Dec 2023 - May 2024",
-        technologies: ["Nextjs", "TailwindCSS", "Typescript", "Java"]
+        duration: "Dec 2023 - July 2024",
+        technologies: ["Spring", "Python", "Vue", "Nextjs", "TailwindCSS", "Typescript", "Java"]
     }
 ]
 
@@ -146,6 +147,7 @@ export const languages = [
     { name: 'Springboot', image: '/assets/skills/spring.svg' },
     { name: 'Express', image: '/assets/skills/express.svg' },
     { name: 'MongoDB', image: '/assets/skills/mongodb.svg' },
+    { name: "Python", image: "/assets/skills/python.svg" },
     // { name: 'Firebase', image: '/assets/skills/firebase.svg' },
     { name: 'Redis', image: '/assets/skills/redis.svg' },
     { name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },

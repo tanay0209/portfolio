@@ -25,7 +25,7 @@ export default function Home() {
 
           <p>I have previously interned at 2 startups, currently working as a system engineer and I love to work in fast faced environment where I get to contribute to the products.</p>
 
-          <p>Currently I am working on <Link href="https://resourcifyy.xyz" className="text-cyan-400" target="_blank">Resourcifyy</Link> <span className="text-sm">(4000+ visits)</span> and <span className="text-cyan-400">Smart Stock</span></p>
+          <p>Currently I am working on <Link href="https://resourcifyy.xyz" className="text-cyan-400" target="_blank">Resourcifyy</Link> <span className="text-sm">(4000+ visits)</span> and <span className="text-cyan-400">Smart Stock</span> (WIP)</p>
 
           <p>I&apos;m open for work, collaboration and freelance projects.</p>
         </div>

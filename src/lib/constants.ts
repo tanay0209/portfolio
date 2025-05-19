@@ -30,6 +30,8 @@ import prisma from "../../public/assets/skills/prisma.svg"
 import postgresql from "../../public/assets/skills/postgresql.svg"
 import angular from "../../public/assets/skills/angular.svg"
 import spring from "../../public/assets/skills/spring.svg"
+import vue from "../../public/assets/skills/vue.svg"
+import python from "../../public/assets/skills/python.svg"
 
 export const skills: Record<string, Skill> = {
     HTML: {
@@ -186,6 +188,16 @@ export const skills: Record<string, Skill> = {
         name: "Springboot",
         icon: spring,
         color: "#70AD51"
+    },
+    VUE: {
+        name: "Vue",
+        icon: vue,
+        color: "#41B883"
+    },
+    PYTHON: {
+        name: "Python",
+        icon: python,
+        color: "#FFD849"
     }
 };
 
