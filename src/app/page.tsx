@@ -23,7 +23,7 @@ export default function Home() {
         <div className="flex flex-col space-y-4 text-justify">
           <p>Welcome to my website! I am Tanay Jagnani, a software engineer from India. I love converting ideas into products and I have been primarily working on frontend development & currently working on my backend development skills.</p>
 
-          <p>I have previously interned at 2 startups, currently working as a system engineer and I love to work in fast faced environment where I get to contribute to the products.</p>
+          <p>I have previously interned at 2 startups, currently working as a system engineer and I love to work in fast paced environment where I get to contribute to the products.</p>
 
           <p>Currently I am working on <Link href="https://resourcifyy.xyz" className="text-cyan-400" target="_blank">Resourcifyy</Link> <span className="text-sm">(4000+ visits)</span> and <span className="text-cyan-400">Smart Stock</span> (WIP)</p>
 
