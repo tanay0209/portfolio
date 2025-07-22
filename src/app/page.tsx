@@ -21,9 +21,9 @@ export default function Home() {
         {/* HERO SECTION */}
         <h1 className="text-4xl pt-4 font-black font-bubblegum">Konnichiwa! I&apos;m Tanay Jagnani</h1>
         <div className="flex flex-col space-y-4 text-justify">
-          <p>Welcome to my website! I am Tanay Jagnani, a software engineer from India. I love converting ideas into products and I have been primarily working on frontend development & currently working on my backend development skills.</p>
+          <p>Welcome to my website! I am Tanay Jagnani, a software developer from India. I love converting ideas into products. I have worked with technologies like Reactjs, Nextjs, PostgreSQL, Nodejs etc</p>
 
-          <p>I have previously interned at 2 startups, currently working as a system engineer and I love to work in fast paced environment where I get to contribute to the products.</p>
+          <p>Currently working as SDE1 at Credgenics, previously interned at 2 startups and TCS as system enegineer. I love to work in fast paced environment where I get to challenge myself.</p>
 
           <p>Currently I am working on <Link href="https://resourcifyy.xyz" className="text-cyan-400" target="_blank">Resourcifyy</Link> <span className="text-sm">(4000+ visits)</span> and <span className="text-cyan-400">Smart Stock</span> (WIP)</p>
 

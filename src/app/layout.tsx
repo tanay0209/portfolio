@@ -6,12 +6,27 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
-})
-
+});
 
 export const metadata: Metadata = {
   title: "Tanay Jagnani",
-  description: "Hello, I'm a software engineer from India. I love building cool products. I have interned at 2 startups and love to work in a fast paced enviornment. I have worked with technologies like Javascript, Reactjs, Nextjs, Nodejs, PostgresSQL and many more.",
+  description:
+    "Konnichiwa! I'm Tanay Jagnani. I am a software developer based out of India...",
+  openGraph: {
+    title: "Tanay Jagnani",
+    description: "Software Developer",
+    images: [
+      "https://res.cloudinary.com/kakarot/image/upload/v1753208564/portfolio.png",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tanay Jagnani",
+    description: "Software Developer",
+    images: [
+      "https://res.cloudinary.com/kakarot/image/upload/v1753208564/portfolio.png",
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -19,9 +34,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
           rel="stylesheet"
@@ -32,7 +49,22 @@ export default function RootLayout({
       </head>
       <body className={`${jetBrainsMono.className} bg-slate-900 text-white w-full`}>
         {children}
-        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6984d24210bb413986653859cd28f325"}'></script>
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "6984d24210bb413986653859cd28f325"}'
+        ></script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_TRACKING_ID}');
+            `,
+          }}
+        ></script>
       </body>
     </html>
   );

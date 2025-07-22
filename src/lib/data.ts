@@ -1,14 +1,26 @@
 export const experience = [
     {
+        title: "Software Development Engineer 1",
+        description: [
+            "Wrote 5+ efficient python scripts for data migration and corrupted data fix handling 1Cr+ records",
+            "Refactored a service, reducing code smells by 10% and ensuring consistent response structure and status codes",
+            "Refactored another service to follow class based approach from function based improving code reusuabilty and maintainabilty",
+        ],
+        company: "Credgenics",
+        location: "Delhi, India",
+        duration: "May 2025 - Present",
+        technologies: ["Python", "ReactJS", "PostgreSQL", "MongoDB", "Javascript"]
+    },
+    {
         title: "Assistant System Engineer",
         description: [
-            "Independently developed the entire frontend using HTML, CSS, and JavaScript, focusing on responsiveness and user experience",
-            "Collaborating in a team project to design and build an Airline Management System simulating real-time flight booking and administrative operations",
+            "Independently developed the entire frontend for airline management system, focusing on 100% responsiveness and user experience",
+            "Assisted in converting the static UI to a dynamic Angular application, improving maintainability and interactivity",
             "Developed microservices for flight scheduling, booking management, and flight management using Springboot",
         ],
         company: "Tata Consultancy Services",
         location: "Delhi, India",
-        duration: "Mar 2025 - Present",
+        duration: "Mar 2025 - May 2025",
         technologies: ["Java", "Spring", "Angular", "TailwindCSS", "Typescript", "Javascript"]
     },
     {
@@ -33,7 +45,7 @@ export const experience = [
         company: "PySphere Technologies LLP",
         location: "Remote, India",
         duration: "Dec 2023 - July 2024",
-        technologies: ["Spring", "Python", "Vue", "Nextjs", "TailwindCSS", "Typescript", "Java"]
+        technologies: ["Spring", "Nextjs", "TailwindCSS", "Typescript", "Java"]
     }
 ]
 
