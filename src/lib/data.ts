@@ -21,6 +21,7 @@ export const experience = [
 			"Redis",
 			"AWS",
 			"JavaScript",
+			"Grafana",
 		],
 	},
 	{
@@ -33,7 +34,7 @@ export const experience = [
 		company: "Tata Consultancy Services",
 		location: "Delhi, India",
 		duration: "Mar 2025 - May 2025",
-		technologies: ["Java", "Spring Boot", "Angular", "JavaScript"],
+		technologies: ["Java", "Spring", "Angular", "JavaScript"],
 	},
 	{
 		title: "Frontend Developer Intern",
@@ -57,7 +58,7 @@ export const experience = [
 		company: "PySphere Technologies LLP",
 		location: "Remote, India",
 		duration: "Dec 2023 - July 2024",
-		technologies: ["Spring Boot", "Next.js", "TailwindCSS", "TypeScript", "Java"],
+		technologies: ["Spring", "Nextjs", "TailwindCSS", "TypeScript", "Java"],
 	},
 ];
 
@@ -70,13 +71,14 @@ export const projects = [
 		image: resourcifyy,
 		title: "Resourcifyy",
 		description:
-			"Resourcifyy is a full-stack resource aggregation platform built to help developers discover and organize high-quality learning resources through structured categorization and community-driven interactions. The platform currently hosts over 200 curated resources across 10+ categories and 50+ subcategories, attracting more than 2,000 unique visitors and generating over 5,000 page views. I designed and developed the application end-to-end using Next.js, TypeScript, PostgreSQL, Prisma, and Redis, implementing features such as resource bookmarking, voting, optimistic UI updates, and Redis-based caching to improve responsiveness and user experience. The platform focuses on scalability, discoverability, and performance while providing an intuitive way for developers to explore and manage educational resources.",
+			"Resourcifyy is a resource aggregation platform built to help people discover and organize high quality resources through structured categorization and community driven interactions. The platform currently hosts over 200 curated resources across 10+ categories and 50+ subcategories, attracting more than 2,000 unique visitors and generating over 5,000 page views. Implementing features such as resource bookmarking, voting, optimistic UI updates, and Redis-based caching to improve responsiveness and user experience.",
 		tech: [
 			"Nextjs",
 			"Typescript",
 			"TailwindCSS",
 			"PostgreSQL",
 			"Prisma",
+			"Redis",
 			"Zustand",
 			"Shadcn",
 		],
@@ -166,35 +168,46 @@ export const designs = [
 ];
 
 export const languages = [
-	{ name: "HTML", image: "/assets/skills/html5.svg" },
-	{ name: "CSS", image: "/assets/skills/css3.svg" },
-	{ name: "Javascript", image: "/assets/skills/javascript.svg" },
-	{ name: "Dart", image: "/assets/skills/dart.svg" },
-	{ name: "Java", image: "/assets/skills/java.svg" },
-	{ name: "Typescript", image: "/assets/skills/typescript.svg" },
 	{ name: "ReactJs", image: "/assets/skills/react.svg" },
 	{ name: "NextJs", image: "/assets/skills/nextdotjs.svg" },
-	{ name: "Flutter", image: "/assets/skills/flutter.svg" },
-	{ name: "Tailwind CSS", image: "/assets/skills/tailwindcss.svg" },
-	{ name: "Bootstrap", image: "/assets/skills/bootstrap.svg" },
-	{ name: "Redux", image: "/assets/skills/redux.svg" },
-	{ name: "GSAP", image: "/assets/skills/gsap.svg" },
-	{ name: "Framer Motion", image: "/assets/skills/framer-motion.svg" },
+	{ name: "Typescript", image: "/assets/skills/typescript.svg" },
+	{ name: "Javascript", image: "/assets/skills/javascript.svg" },
 	{ name: "NodeJs", image: "/assets/skills/nodedotjs.svg" },
+
+	{ name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
+	{ name: "Python", image: "/assets/skills/python.svg" },
+	{ name: "Java", image: "/assets/skills/java.svg" },
+	{ name: "AWS", image: "/assets/skills/aws.svg" },
+	{ name: "Kafka", image: "/assets/skills/kafka.svg" },
+
+	{ name: "Angular", image: "/assets/skills/angular.svg" },
 	{ name: "Springboot", image: "/assets/skills/spring.svg" },
 	{ name: "Express", image: "/assets/skills/express.svg" },
 	{ name: "MongoDB", image: "/assets/skills/mongodb.svg" },
-	{ name: "Python", image: "/assets/skills/python.svg" },
-	// { name: 'Firebase', image: '/assets/skills/firebase.svg' },
 	{ name: "Redis", image: "/assets/skills/redis.svg" },
-	{ name: "PostgreSQL", image: "/assets/skills/postgresql.svg" },
+
 	{ name: "Prisma", image: "/assets/skills/prisma.svg" },
+	{ name: "Tailwind CSS", image: "/assets/skills/tailwindcss.svg" },
+	{ name: "Redux", image: "/assets/skills/redux.svg" },
+	{ name: "Zustand", image: "/assets/skills/zustand.svg" },
 	{ name: "Git", image: "/assets/skills/git.svg" },
-	{ name: "Jira", image: "/assets/skills/jira.svg" },
-	{ name: "MySQL", image: "/assets/skills/mysql.svg" },
-	{ name: "Figma", image: "/assets/skills/figma.svg" },
-	{ name: "Android Studio", image: "/assets/skills/androidstudio.svg" },
+
 	{ name: "Github", image: "/assets/skills/github.svg" },
-	{ name: "VS Code", image: "/assets/skills/visualstudiocode.svg" },
 	{ name: "Postman", image: "/assets/skills/postman.svg" },
+	{ name: "Jira", image: "/assets/skills/jira.svg" },
+	{ name: "Figma", image: "/assets/skills/figma.svg" },
+	{ name: "VS Code", image: "/assets/skills/visualstudiocode.svg" },
+
+	{ name: "Framer Motion", image: "/assets/skills/framer-motion.svg" },
+	{ name: "HTML", image: "/assets/skills/html5.svg" },
+	{ name: "CSS", image: "/assets/skills/css3.svg" },
+
+	// { name: "Dart", image: "/assets/skills/dart.svg" },
+	// { name: "Flutter", image: "/assets/skills/flutter.svg" },
+	// { name: "Bootstrap", image: "/assets/skills/bootstrap.svg" },
+	// { name: "GSAP", image: "/assets/skills/gsap.svg" },
+	// { name: 'Firebase', image: '/assets/skills/firebase.svg' },
+	// { name: "MySQL", image: "/assets/skills/mysql.svg" },
+
+	{ name: "Android Studio", image: "/assets/skills/androidstudio.svg" },
 ];
